@@ -18,6 +18,84 @@ router.get("/items/:id", itemControllers.read);
 // Route to add a new item
 router.post("/items", itemControllers.add);
 
-/* ************************************************************************* */
+/* *****************************MOVIES********************************** */
+
+// Import moviesControllers module for handling item-related operations
+const moviesControllers = require("./controllers/moviesControllers");
+
+// Route to get a list of movies
+router.get("/movies", moviesControllers.browse);
+
+// Route to get a specific movie by ID
+router.get("/movies/:id", moviesControllers.read);
+
+// Route to add a new movie
+router.post("/movies", moviesControllers.add);
+
+// Route to update a movie
+router.put("/movies/:id", moviesControllers.edit);
+
+// Route to delete a movie
+router.delete("/movies/:id", moviesControllers.destroy);
+
+/* *****************************SCREENS********************************** */
+
+// Import screensControllers module for handling item-related operations
+const screensControllers = require("./controllers/screensControllers");
+
+// Route to get a list of screens
+router.get("/screens", screensControllers.browse);
+
+// Route to get a specific screen by ID
+router.get("/screens/:id", screensControllers.read);
+
+// Route to add a new screen
+router.post("/screens", screensControllers.add);
+
+// Route to update a screen
+router.put("/screens/:id", screensControllers.edit);
+
+// Route to delete a screen
+router.delete("/screens/:id", screensControllers.destroy);
+
+/* *****************************USERS********************************** */
+
+// Import usersControllers module for handling item-related operations
+const usersControllers = require("./controllers/usersControllers");
+
+// Route to get a list of users
+router.get("/users", usersControllers.browse);
+
+// Route to get a specific user by ID
+router.get("/users/:id", usersControllers.read);
+
+// Route to add a new user
+router.post("/users", usersControllers.add);
+
+// Route to update a user
+router.put("/users/:id", usersControllers.edit);
+
+// Route to delete a user
+router.delete("/users/:id", usersControllers.destroy);
+
+/* *****************************PROFILS********************************** */
+
+// Import usersControllers module for handling item-related operations
+const profilsControllers = require("./controllers/profilsControllers");
+
+// Route to get a list of profils
+router.get("/profils", profilsControllers.browse);
+
+// Route to get a specific profil by ID
+router.get("/profils/:id", profilsControllers.read);
+
+// Route to add a new profil
+router.post("/profils", profilsControllers.add);
+
+// Route to update a profil
+router.put("/profils/:id", profilsControllers.edit);
+
+// Route to delete a profil
+router.delete("/profils/:id", profilsControllers.destroy);
 
 module.exports = router;
