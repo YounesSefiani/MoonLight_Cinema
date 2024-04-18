@@ -1,0 +1,236 @@
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) {
+  .logo img {
+    width: auto;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  .navbar ul {
+    background-color: #000033;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    border: solid 1px #c0c0c0;
+    font-size: 25px;
+    font-family: "Cinzel Decorative", serif;
+  }
+
+  .navbar li {
+    margin: 0;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #c0c0c0;
+    transition: color 0.3 ease;
+  }
+
+  .navbar a:hover {
+    color: #7ec8fa;
+  }
+
+  .dropmenu {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropcontent {
+    display: none;
+    position: absolute;
+    background-color: #000033;
+    border: 1px solid #c0c0c0;
+  }
+
+  .dropcontent a {
+    float: none;
+    color: #c0c0c0;
+    padding: 10px 5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropmenu:hover .dropcontent {
+    display: block;
+    width: auto;
+  }
+
+  .navbarPhone {
+    display: none;
+  }
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbarPhone {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #000033;
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+
+  .navbarPhoneButton {
+    background-color: #000033;
+    border: solid 1px #c0c0c0;
+    color: #c0c0c0;
+  }
+
+  .logo img {
+    width: 65%;
+  }
+
+  .navbarPhoneMenu {
+    display: none;
+  }
+
+  .navbarPhoneMenu.menu-open {
+    display: flex;
+    position: absolute;
+    z-index: 99999;
+    padding: 0;
+    right: 72%;
+    top: auto;
+    width: 10px;
+    font-size: 20px;
+  }
+
+  .navbarPhoneMenu.menu-open ul {
+    background-color: #000033;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    border: solid 1px #c0c0c0;
+  }
+
+  .navbarPhoneMenu.menu-open li {
+    margin: 0;
+  }
+
+  .navbarPhoneMenu.menu-open a {
+    text-decoration: none;
+    color: #c0c0c0;
+    font-family: "Cinzel Decorative", serif;
+  }
+
+  .dropcontentMobile {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    gap: 10px;
+  }
+
+  .dropcontentMobile li {
+    font-size: 12px;
+    text-align: center;
+    border-bottom: solid 1px #c0c0c0;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 425px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbarPhone {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #000033;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbarPhoneButton {
+    background-color: #000033;
+    border: solid 1px #c0c0c0;
+    color: #c0c0c0;
+  }
+
+  .logo img {
+    width: 65%;
+  }
+
+  .navbarPhoneMenu {
+    display: none;
+  }
+
+  .navbarPhoneMenu.menu-open {
+    display: flex;
+    position: absolute;
+    z-index: 99999;
+    padding: 0;
+    left: 8%;
+    top: auto;
+    width: 10px;
+    font-size: 20px;
+  }
+
+  .navbarPhoneMenu.menu-open ul {
+    background-color: #000033;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    border: solid 1px #c0c0c0;
+  }
+
+  .navbarPhoneMenu.menu-open li {
+    margin: 0;
+  }
+
+  .navbarPhoneMenu.menu-open a {
+    text-decoration: none;
+    color: #c0c0c0;
+    font-family: "Cinzel Decorative", serif;
+  }
+
+  .dropcontentMobile {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    gap: 10px;
+  }
+
+  .dropcontentMobile li {
+    font-size: 12px;
+    text-align: center;
+    border-bottom: solid 1px #c0c0c0;
+  }
+}
