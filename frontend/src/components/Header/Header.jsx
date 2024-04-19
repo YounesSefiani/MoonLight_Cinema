@@ -82,6 +82,11 @@ function Header() {
         </ul>
       </nav>
       <div className="navbarPhone">
+        <div className="logoPhone">
+          <Link to="/">
+            <img src={MoonlightLogo} alt="Moonlight Logo" />
+          </Link>
+        </div>
         <button
           type="button"
           ref={menuButtonRef}
