@@ -1,0 +1,130 @@
+.carouselMenu {
+  z-index: 999;
+}
+
+.carouselMovies {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movieBackground {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.movieBackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movieLogo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  gap: 5%;
+}
+
+.movieLogo img {
+  width: auto;
+  height: auto;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movieLogo h2 {
+  color: #4b0082;
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+}
+
+.button {
+  background-color: #daa520;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 90%;
+  height: 5vh;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .carouselMovies {
+    width: 90%;
+    height: 30vh;
+  }
+
+  .movieBackground img {
+    width: auto;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .movieLogo h2 {
+    color: #4b0082;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 100%;
+  }
+
+  .button {
+    font-size: 15px;
+    width: 90%;
+    height: 3vh;
+    bottom: 35px;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 425px) {
+  .carouselMovies {
+    width: 90%;
+    height: 15vh;
+  }
+
+  .movieBackground img {
+    width: auto;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .movieLogo img {
+    height: 100%;
+    padding: 25px;
+    margin-bottom: 35px;
+  }
+
+  .movieLogo h2 {
+    color: #4b0082;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 100%;
+  }
+
+  .button {
+    font-size: 13px;
+    width: 90%;
+    height: 3vh;
+    bottom: 20px;
+  }
+}
