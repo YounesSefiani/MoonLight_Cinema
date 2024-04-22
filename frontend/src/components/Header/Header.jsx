@@ -35,7 +35,7 @@ function Header() {
   };
 
   const handleButtonClick = (event) => {
-    event.stopPropagation(); // Empêche la propagation de l'événement de clic vers le gestionnaire d'événements du document
+    event.stopPropagation();
     toggleMenu();
   };
 
