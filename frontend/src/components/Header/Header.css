@@ -52,6 +52,7 @@
   .dropmenu {
     float: left;
     overflow: hidden;
+    z-index: 1000;
   }
 
   .dropcontent {
