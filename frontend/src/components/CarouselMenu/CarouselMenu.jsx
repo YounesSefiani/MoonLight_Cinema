@@ -9,7 +9,6 @@ function CarouselMenu() {
   const movies = useLoaderData();
   return (
     <div className="carouselMenu">
-      <h1>Menu Carousel</h1>
       <Carousel
         showArrows
         infiniteLoop
