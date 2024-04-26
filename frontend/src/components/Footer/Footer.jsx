@@ -1,5 +1,5 @@
-import React from "react";
-import { useLoaderData, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -9,11 +9,17 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-
+import connexion from "../../services/connexion";
 import "./Footer.css";
 
 function Footer() {
-  const movies = useLoaderData();
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    connexion.get("/movies").then((response) => {
+      setMovies(response.data);
+    });
+  }, []);
 
   const upcomingMovies = movies.filter((movie) => movie.state === "upcoming");
   const availableMovies = movies.filter((movie) => movie.state === "available");
