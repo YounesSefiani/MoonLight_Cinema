@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import connexion from "./services/connexion";
 
 import App from "./App";
+import InfosPratiques from "./pages/InfosPratiques/InfosPratiques";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         .then((response) => response.data)
         .catch((err) => console.error(err));
     },
+  },
+  {
+    path: "/infos-pratiques",
+    element: <InfosPratiques />,
   },
 ]);
 
