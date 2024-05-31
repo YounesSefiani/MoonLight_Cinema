@@ -33,6 +33,17 @@ class screensManager extends AbstractManager {
     return rows[0];
   }
 
+  async readscreenId(screenId) {
+    // Execute the SQL SELECT query to retrieve a specific screen by its ID
+    const [rows] = await this.database.query(
+      `select * from ${this.table} where id = ?`,
+      [screenId]
+    );
+
+    // Return the first row of the result, which represents the screens
+    return rows[0];
+  }
+
   async readAll() {
     // Execute the SQL SELECT query to retrieve all screens from the "screens" table
     const [rows] = await this.database.query(`select * from ${this.table}`);

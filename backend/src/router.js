@@ -29,6 +29,11 @@ router.get("/movies", moviesControllers.browse);
 // Route to get a specific movie by ID
 router.get("/movies/:id", moviesControllers.read);
 
+router.get(
+  "/movies/:id/projections",
+  moviesControllers.getMovieWithProjections
+);
+
 // Route to add a new movie
 router.post("/movies", moviesControllers.add);
 
@@ -57,6 +62,35 @@ router.put("/screens/:id", screensControllers.edit);
 
 // Route to delete a screen
 router.delete("/screens/:id", screensControllers.destroy);
+
+/* *****************************PROJECTIONS********************************** */
+// Import screensControllers module for handling item-related operations
+const projectionsControllers = require("./controllers/projectionsControllers");
+
+// Route to get a list of projections
+router.get("/projections", projectionsControllers.browse);
+
+router.get(
+  "/projections/movies/:movieId",
+  projectionsControllers.getProjectionsByMovieId
+);
+
+router.get(
+  "/projections/screens/:screenId",
+  projectionsControllers.getProjectionsByScreenId
+);
+
+// Route to get a specific projections by ID
+router.get("/projections/:id", projectionsControllers.read);
+
+// Route to add a new projection
+router.post("/projections", projectionsControllers.add);
+
+// Route to update a projection
+router.put("/projections/:id", projectionsControllers.edit);
+
+// Route to delete a projection
+router.delete("/projections/:id", projectionsControllers.destroy);
 
 /* *****************************USERS********************************** */
 
