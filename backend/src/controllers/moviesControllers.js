@@ -1,6 +1,14 @@
 // Import access to database tables
 const tables = require("../tables");
 
+const MoviesManager = require("../models/MoviesManager");
+
+const ProjectionsManager = require("../models/ProjectionsManager");
+
+const moviesManager = new MoviesManager();
+
+const projectionsManager = new ProjectionsManager();
+
 // The B of BREAD - Browse (Read All) operation
 const browse = async (req, res, next) => {
   try {
@@ -71,6 +79,21 @@ const destroy = async (req, res, next) => {
   }
 };
 
+const getMovieWithProjections = async (req, res, next) => {
+  try {
+    const movieId = req.params.id;
+    const movie = await moviesManager.read(movieId);
+    if (movie == null) {
+      return res.sendStatus(404);
+    }
+    const projections = await projectionsManager.readByMovieId(movieId);
+    movie.projections = projections;
+    return res.json(movie);
+  } catch (err) {
+    return next(err);
+  }
+};
+
 // Ready to export the controller functions
 module.exports = {
   browse,
@@ -78,4 +101,5 @@ module.exports = {
   edit,
   add,
   destroy,
+  getMovieWithProjections,
 };
